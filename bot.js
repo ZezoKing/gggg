@@ -10,4 +10,3 @@ var channel = "509037812666859540";
 
 
 
-client.login(process.env.BOT_TOKEN);
