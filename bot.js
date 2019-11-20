@@ -1,24 +1,26 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+var prefix = "$";
 
-var prefix = "-" // حط البرفكس الى تبيه
 client.on('message', message => {
-
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
-// لا  تسوي شيء عشان لا تنكب نفسك
+
   let command = message.content.split(" ")[0];
   command = command.slice(prefix.length);
-// لا  تسوي شيء عشان لا تنكب نفسك
+
   let args = message.content.split(" ").slice(1);
-// لا تسوي شيء عشان لا تنكب نفسك
-  if (command == "say") {
-  if (message.member.id !== "556849635335864371") return message.channel.send(' رسالة الي تبيها here ');// غير الرسالة الي تبيها تكون رد + الأيدي
-   message.channel.send(args.join("  "))// 
-   message.delete()// By ! Ln - BlùeWolf, انــســأن#5555
+  
+ 
+
+if (command == "say") {
+    let say = new Discord.RichEmbed()
+    .setDescription(args.join("  "))
+    .setColor(0x23b2d6)
+    message.channel.sendEmbed(say);
+    message.delete();
   }
- });
-// كل زق 
+
+
+});
 
 
 client.login(process.env.BOT_TOKEN);
