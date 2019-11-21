@@ -13,7 +13,7 @@ client.on('message', message => {
   let args = message.content.split(" ").slice(1);
 // لا تسوي شيء عشان لا تنكب نفسك
   if (command == "say") {
-  if (message.member.id !== "556849635335864371") return message.channel.send(' رسالة الي تبيها here ');// غير الرسالة الي تبيها تكون رد + الأيدي
+  if (message.member.id !== "608511451736571914") return message.channel.send('hi');// غير الرسالة الي تبيها تكون رد + الأيدي
    message.channel.send(args.join("  "))// 
    message.delete()// By ! Ln - BlùeWolf, انــســأن#5555
   }
